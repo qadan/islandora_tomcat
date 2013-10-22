@@ -62,4 +62,9 @@ else
   fi
 fi 
 
+export FEDORA_HOME=/home/travis/islandora_tomcat/fedora
+export CATALINA_HOME=/home/travis/islandora_tomcat
+export PATH=$FEDORA_HOME/server/bin:$FEDORA_HOME/client/bin:$JAVA_HOME/bin:$CATALINA_HOME/bin:$KAKADU_HOME:$PATH
+export SOLR_HOME=$FEDORA_HOME/solr
+
 exec "$PRGDIR"/"$EXECUTABLE" start "$@"
